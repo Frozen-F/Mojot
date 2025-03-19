@@ -1,7 +1,9 @@
 // app.ts
 App<IAppOption>({
-  globalData: {},
-  onLaunch() {
+  globalData: {
+    text: "sds"
+  },
+  onLaunch() {     // 小程序启动之后出发
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -15,4 +17,14 @@ App<IAppOption>({
       },
     })
   },
+  // onShow (options) {
+  //   console.log('onShow', options)
+  //   // Do something when show.
+  // },
+  // onHide () {
+  //   // Do something when hide.
+  // },
+  // onError (msg) {
+  //   console.log(msg)
+  // },
 })
